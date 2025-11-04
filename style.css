@@ -1,378 +1,330 @@
-        body {
-            background-color: #f4f6f8;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* Algemene body */
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        .container {
-            max-width: 900px;
-        }
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+}
 
-        /* Formulier stijl */
-        form {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+/* Formulier stijl */
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-        form .form-label {
-            font-weight: 600;
-            font-size: 14px;
-        }
+form .form-label {
+    font-weight: 600;
+    font-size: 14px;
+}
 
-        form input,
-        form textarea {
-            font-size: 14px;
-            padding: 6px 10px;
-        }
+form input,
+form textarea {
+    font-size: 14px;
+    padding: 6px 10px;
+}
 
-        /* Thema preview */
-        .theme-preview {
-            padding: 8px;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-            margin-right: 10px;
-            width: 90px;
-            font-size: 13px;
-            border: 1px solid #ccc;
-            display: inline-block;
-            transition: all 0.2s;
-        }
+/* Thema preview */
+.theme-preview {
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 90px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    transition: all 0.2s;
+}
 
-        .theme-preview:hover {
-            transform: scale(1.05);
-            border-color: #007bff;
-        }
+.theme-preview:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+}
 
-        .theme-selected {
-            border-color: #007bff;
-            background-color: #007bff;
-            color: #fff;
-        }
+.theme-selected {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: #fff;
+}
 
-        /* CV output A4 */
-        #cv-output {
-            border: 1px solid #ddd;
-            padding: 30px;
-            margin-top: 20px;
-            border-radius: 10px;
-            min-height: 297mm;
-            width: 210mm;
-            background-color: #fff;
-            box-sizing: border-box;
-            margin-left: auto;
-            margin-right: auto;
-        }
+/* CV output A4 */
+#cv-output {
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    min-height: auto;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
 
-        /* Thema layouts professioneel */
-        .theme-modern {
-            font-family: 'Helvetica Neue', sans-serif;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+/* Alle thema layouts */
+.theme-modern,
+.theme-elegant,
+.theme-classic,
+.theme-split,
+.theme-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
-        .theme-modern .header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
+/* Header layouts */
+.theme-modern .header,
+.theme-elegant .header,
+.theme-classic .header,
+.theme-split .header,
+.theme-minimal .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
 
-        .theme-modern .header img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-right: 20px;
-            border: 2px solid #fff;
-        }
+.theme-modern .header img,
+.theme-elegant .header img,
+.theme-classic .header img,
+.theme-split .header img,
+.theme-minimal .header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-        .theme-modern h2 {
-            margin: 0;
-            font-size: 28px;
-        }
+/* CV content */
+.theme-modern .cv-content,
+.theme-elegant .cv-content,
+.theme-classic .cv-content,
+.theme-split .cv-content,
+.theme-minimal .cv-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-        .theme-modern p.contact {
-            font-size: 14px;
-            margin: 5px 0;
-        }
+/* Split layout */
+.theme-split .cv-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
-        .theme-modern .section-title {
-            color: #007bff;
-            font-size: 18px;
-            margin-top: 20px;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 3px;
-        }
+.theme-split .left,
+.theme-split .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
-        .theme-modern ul {
-            padding-left: 20px;
-        }
+/* Sectietitels */
+.theme-modern .section-title,
+.theme-elegant .section-title,
+.theme-classic .section-title,
+.theme-split .section-title,
+.theme-minimal .section-title {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
 
-        .theme-modern .cv-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+/* Download knop */
+#downloadBtn {
+    display: none;
+    margin-top: 10px;
+    width: 100%;
+}
 
-        /* Elegant thema */
-        .theme-elegant {
-            font-family: 'Palatino Linotype', serif;
-            color: #3e3e3e;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+/* THEMA SPECIFIEK */
 
-        .theme-elegant .header {
-            border-bottom: 4px solid #8b0000;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
+/* Modern */
+.theme-modern .header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
 
-        .theme-elegant .header img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-right: 20px;
-            border: 2px solid #8b0000;
-        }
+.theme-modern h2 {
+    margin: 0;
+    font-size: 28px;
+}
 
-        .theme-elegant h2 {
-            font-size: 30px;
-        }
+.theme-modern p.contact {
+    font-size: 14px;
+}
 
-        .theme-elegant p.contact {
-            font-style: italic;
-            font-size: 14px;
-            margin: 3px 0;
-        }
+.theme-modern .section-title {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 3px;
+}
 
-        .theme-elegant .section-title {
-            color: #8b0000;
-            font-size: 20px;
-            margin-top: 20px;
-            border-bottom: 1px solid #8b0000;
-        }
+.theme-modern ul {
+    padding-left: 20px;
+}
 
-        .theme-elegant ul {
-            padding-left: 20px;
-        }
+/* Elegant */
+.theme-elegant .header {
+    border-bottom: 4px solid #8b0000;
+    padding-bottom: 10px;
+}
 
-        .theme-elegant .cv-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+.theme-elegant h2 {
+    font-size: 30px;
+}
 
-        #downloadBtn {
-            display: none;
-            margin-top: 10px;
-        }
+.theme-elegant p.contact {
+    font-style: italic;
+    font-size: 14px;
+}
 
-        .theme-classic {
-            font-family: Georgia, serif;
-            color: #2c2c2c;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+.theme-elegant .section-title {
+    color: #8b0000;
+    font-size: 20px;
+    border-bottom: 1px solid #8b0000;
+}
 
-        .theme-classic .header {
-            padding: 15px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
+.theme-elegant ul {
+    padding-left: 20px;
+}
 
-        .theme-classic .header img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 15px;
-            border: 1px solid #999;
-        }
+/* Classic */
+.theme-classic .header {
+    padding: 15px;
+    margin-bottom: 20px;
+}
 
-        .theme-classic h2 {
-            font-size: 28px;
-            font-weight: 500;
-            margin: 0;
-        }
+.theme-classic h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
 
-        .theme-classic p.contact {
-            font-size: 13px;
-            margin: 3px 0;
-            font-weight: 400;
-        }
+.theme-classic p.contact {
+    font-size: 13px;
+}
 
-        .theme-classic .section-title {
-            font-size: 18px;
-            margin-top: 15px;
-            border-bottom: 1px solid #aaa;
-            font-weight: 500;
-        }
+.theme-classic .section-title {
+    font-size: 18px;
+    border-bottom: 1px solid #aaa;
+}
 
-        .theme-classic ul {
-            padding-left: 20px;
-            margin: 5px 0;
-            font-weight: 400;
-        }
+.theme-classic ul {
+    padding-left: 20px;
+    margin: 5px 0;
+}
 
-        .theme-classic .cv-content {
-            flex-grow: 1;
-        }
+/* Split */
+.theme-split .header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 6px;
+}
 
-        /* Split layout: werkervaring links, stage/rechts */
-        .theme-split {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+.theme-split h2 {
+    font-weight: 500;
+    font-size: 28px;
+}
 
-        .theme-split .header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
+.theme-split p.contact {
+    font-size: 13px;
+}
 
-        .theme-split .header img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
+.theme-split .section-title {
+    font-size: 17px;
+    border-bottom: 1px solid #007bff;
+}
 
-        .theme-split h2 {
-            font-weight: 500;
-            font-size: 28px;
-            margin: 0;
-        }
+/* Minimal */
+.theme-minimal .header {
+    padding: 15px;
+}
 
-        .theme-split p.contact {
-            font-size: 13px;
-            margin: 5px 0;
-            font-weight: 400;
-        }
+.theme-minimal h2 {
+    font-weight: 400;
+    font-size: 26px;
+}
 
-        .theme-split .cv-content {
-            display: flex;
-            flex-grow: 1;
-            gap: 20px;
-        }
+.theme-minimal p.contact {
+    font-size: 12px;
+}
 
-        .theme-split .left,
-        .theme-split .right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
+.theme-minimal .section-title {
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
 
-        .theme-split .section-title {
-            font-size: 17px;
-            margin-top: 10px;
-            border-bottom: 1px solid #007bff;
-            font-weight: 500;
-            padding-bottom: 2px;
-        }
+.theme-minimal ul {
+    padding-left: 15px;
+}
 
-        .theme-split ul {
-            padding-left: 15px;
-            font-weight: 400;
-            margin: 3px 0;
-        }
+/* RESPONSIVE */
 
-        /* Minimal layout */
-        .theme-minimal {
-            font-family: 'Helvetica', sans-serif;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+@media (max-width: 992px) {
 
-        .theme-minimal .header {
-            padding: 15px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
+    /* Header stacked */
+    .theme-modern .header,
+    .theme-elegant .header,
+    .theme-classic .header,
+    .theme-split .header,
+    .theme-minimal .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        .theme-minimal .header img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
+    /* Split layout wordt kolommen onder elkaar */
+    .theme-split .cv-content {
+        flex-direction: column;
+    }
 
-        .theme-minimal h2 {
-            font-weight: 400;
-            font-size: 26px;
-            margin: 0;
-        }
+    /* Foto kleiner */
+    .theme-modern .header img,
+    .theme-elegant .header img,
+    .theme-classic .header img,
+    .theme-split .header img,
+    .theme-minimal .header img {
+        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+    }
 
-        .theme-minimal p.contact {
-            font-size: 12px;
-            margin: 3px 0;
-            font-weight: 300;
-        }
+    /* Tekst kleiner */
+    .theme-modern h2,
+    .theme-elegant h2,
+    .theme-classic h2,
+    .theme-split h2,
+    .theme-minimal h2 {
+        font-size: 1.5rem;
+    }
 
-        .theme-minimal .section-title {
-            font-size: 16px;
-            margin-top: 10px;
-            border-bottom: 1px solid #ccc;
-            font-weight: 400;
-        }
+    .theme-modern .section-title,
+    .theme-elegant .section-title,
+    .theme-classic .section-title,
+    .theme-split .section-title,
+    .theme-minimal .section-title {
+        font-size: 1rem;
+    }
 
-        .theme-minimal ul {
-            padding-left: 15px;
-            font-weight: 300;
-            margin: 2px 0;
-        }
+    form {
+        padding: 15px;
+    }
 
-        .theme-minimal .cv-content {
-            flex-grow: 1;
-        }
-
-        /* Split layout verbeterd */
-        .theme-split .cv-content {
-            display: flex;
-            flex-direction: row;
-            flex-grow: 1;
-            gap: 20px;
-            height: 100%;
-            /* Vul de volledige hoogte van A4 */
-        }
-
-        .theme-split .left,
-        .theme-split .right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: 100%;
-            /* Zorg dat kolommen dezelfde hoogte hebben */
-            padding-bottom: 20px;
-        }
-
-        /* Optioneel: subtiele achtergrond voor rechterkolom om lege ruimte te breken */
-        .theme-split .right {
-            background-color: #f8f9fa;
-            border-radius: 6px;
-            padding: 15px;
-        }
+    .theme-preview {
+        width: 70px;
+        font-size: 12px;
+        padding: 6px;
+    }
+}
